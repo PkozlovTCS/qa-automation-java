@@ -1,7 +1,10 @@
 package com.tinkoff.edu.app;
 
 public class LoanCalcController {
-    public static int createRequest() {
-        return LoanCalcService.createRequest();
+
+    private LoanCalcService loanCalcService = new LoanCalcService();
+
+    public int createRequest(LoanRequest request) {
+        return loanCalcService.createRequest(request);
     }
 }
