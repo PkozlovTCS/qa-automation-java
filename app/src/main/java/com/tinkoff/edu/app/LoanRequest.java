@@ -16,8 +16,11 @@ public class LoanRequest {
     public int getAmount() {
         return amount;
     }
+    public  LoanType getType(){
+        return type;
+    }
     public String toString() {
-        return this.getAmount() + " for " + this.getMonths() + this.type;
+        return this.getAmount() + " for " + this.getMonths() + " " + this.type;
     }
 
 }
