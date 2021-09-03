@@ -10,15 +10,19 @@ public class LoanRequest {
         this.months = months;
         this.amount = amount;
     }
+
     public int getMonths() {
         return months;
     }
+
     public int getAmount() {
         return amount;
     }
-    public  LoanType getType(){
+
+    public LoanType getType() {
         return type;
     }
+
     public String toString() {
         return this.getAmount() + " for " + this.getMonths() + " " + this.type;
     }

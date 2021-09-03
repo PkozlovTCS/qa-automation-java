@@ -2,13 +2,16 @@ package com.tinkoff.edu.app;
 
 public class LoanCalcService implements CalcService {
 
-    private LoanCalcRepository repo;
+    private final LoanCalcRepository loanCalcRepository;
 
-    public LoanCalcService(LoanCalcRepository repo) {
-        this.repo = repo;
+    public LoanCalcService(LoanCalcRepository loanCalcRepository) {
+        this.loanCalcRepository = loanCalcRepository;
     }
 
-    public int createRequest(LoanRequest request) {
-        return repo.save(request);
+    public LoanResponse createRequest(LoanRequest request) {
+        return new LoanResponse(
+                loanCalcRepository.save(request),
+                ResponseType.APPROVED
+        );
     }
 }
