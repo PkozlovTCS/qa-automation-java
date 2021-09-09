@@ -21,4 +21,12 @@ public class LoanResponse {
     public Integer getRequestId() {
         return requestId;
     }
+
+    @Override
+    public String toString() {
+        return "LoanResponse{" +
+                "type=" + type +
+                ", requestId=" + requestId +
+                '}';
+    }
 }

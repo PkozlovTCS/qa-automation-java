@@ -5,6 +5,7 @@ public class LoanCalcService implements CalcService {
     private final LoanCalcRepository loanCalcRepository;
 
     public LoanCalcService(LoanCalcRepository loanCalcRepository) {
+
         this.loanCalcRepository = loanCalcRepository;
     }
 
