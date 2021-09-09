@@ -1,9 +1,17 @@
 package com.tinkoff.edu.app;
 
-public class LoanCalcService {
-    public static int createRequest() {
-        int requestId = LoanCalcRepository.save();
-        LoanCalcLogger.log(requestId);
-        return requestId;
+public class LoanCalcService implements CalcService {
+
+    private final LoanCalcRepository loanCalcRepository;
+
+    public LoanCalcService(LoanCalcRepository loanCalcRepository) {
+        this.loanCalcRepository = loanCalcRepository;
+    }
+
+    public LoanResponse createRequest(LoanRequest request) {
+        return new LoanResponse(
+                loanCalcRepository.save(request),
+                ResponseType.APPROVED
+        );
     }
 }
