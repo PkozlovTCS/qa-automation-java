@@ -10,7 +10,6 @@ public class LoanCalcController {
     }
 
     public LoanResponse createRequest(LoanRequest request) {
-
         return loanCalcService.createRequest(request);
     }
 }
