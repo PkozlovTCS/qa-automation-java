@@ -1,5 +1,6 @@
 package com.tinkoff.edu.app;
 
+/*
 public class NotForIpLoanCalcService extends LoanCalcService {
 
     public NotForIpLoanCalcService(LoanCalcRepository loanCalcRepository) {
@@ -29,3 +30,4 @@ public class NotForIpLoanCalcService extends LoanCalcService {
         return super.createRequest(request);
     }
 }
+*/

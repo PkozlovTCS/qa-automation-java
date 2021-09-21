@@ -10,7 +10,7 @@ public class LoanCalcService implements CalcService {
     }
     public LoanResponse createRequest(LoanRequest request) {
         if (LoanType.IP.equals(request.getType())) {
-            return new LoanResponse(ResponseType.DENIED);
+            return new LoanResponse(loanCalcRepository.save(request), ResponseType.DENIED);
         }
         if (LoanType.PERSON.equals(request.getType()) & (request.getMonths() <= 12) & (request.getAmount() <= 10000.0)) {
             return new LoanResponse(loanCalcRepository.save(request), ResponseType.APPROVED);

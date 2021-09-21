@@ -4,7 +4,6 @@ public class LoanResponse {
 
     private final ResponseType type;
     private Integer requestId;
-    LoanResponse request;
 
     public LoanResponse(int requestId, ResponseType type) {
         this.requestId = requestId;
