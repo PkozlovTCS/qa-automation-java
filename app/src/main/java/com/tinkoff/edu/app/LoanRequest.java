@@ -3,9 +3,9 @@ package com.tinkoff.edu.app;
 public class LoanRequest {
     private final LoanType type;
     private final int months;
-    private final int amount;
+    private final double amount;
 
-    public LoanRequest(LoanType type, int months, int amount) {
+    public LoanRequest(LoanType type, int months, double amount) {
         this.type = type;
         this.months = months;
         this.amount = amount;
@@ -15,7 +15,7 @@ public class LoanRequest {
         return months;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return amount;
     }
 
